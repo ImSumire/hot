@@ -1,0 +1,14 @@
+[package]
+name = "hot"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "hot"
+crate-type = ["cdylib"]
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+[dependencies]
+raylib-ffi = "5.5.0"
